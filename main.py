@@ -14,6 +14,7 @@ if not settings.configured:
         DEBUG=strtobool(os.getenv("DEBUG", "true")),
         ROOT_URLCONF=sys.modules[__name__],
         SECRET_KEY=os.getenv("SECRET_KEY", "fake"),
+        ALLOWED_HOSTS=["*"],
     )
 
 
