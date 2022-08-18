@@ -9,13 +9,15 @@ django-admin:  ## Like django-admin.py
 test:  ## Run tests
 	pytest
 
+test-cov:  ## Run tests with coverage
+	pytest --cov --cov-report term-missing
+
 lint: ## Lint code
 	flake8 --show-source --statistics .
 	isort --check-only --diff .
 	black --check --diff .
 
 lint-fix: ## Fix linting errors
-	flake8 .
 	black .
 	isort .
 

@@ -1,6 +1,5 @@
 import os
 import sys
-from distutils.util import strtobool
 
 from django.conf import settings
 from django.core.asgi import get_asgi_application
@@ -8,6 +7,16 @@ from django.core.management import execute_from_command_line
 from django.core.wsgi import get_wsgi_application
 from django.http import HttpRequest, HttpResponse
 from django.urls import path
+
+
+def strtobool(value: str) -> bool:
+    true_values = ("y", "yes", "t", "true", "on", "1")
+
+    if isinstance(value, str) and value.lower() in true_values:
+        return True
+
+    return False
+
 
 if not settings.configured:
     settings.configure(

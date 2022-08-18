@@ -16,10 +16,39 @@ isort = "^5.10.1"
 flake8 = "^5.0.4"
 mypy = "^0.971"
 pytest = "^7.1.2"
-pytest-cov = "^2.12.1"
+pytest-cov = "3.0.0"
 black = "^22.6"
 pytest-asyncio = "^0.19.0"
 pytest-django = "^4.5.2"
+
+[tool.black]
+line-length = 79
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | dist
+  )
+)
+'''
+
+[tool.coverage.run]
+omit = [
+    "conftest.py",
+    "**tests**",
+    "**test**",
+]
+branch = true
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
