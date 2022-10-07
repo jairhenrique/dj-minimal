@@ -1,3 +1,5 @@
+export PYTHONPATH=$(shell pwd)/src/
+
 .PHONY=help
 
 help:  ## This help
@@ -22,7 +24,7 @@ lint-fix: ## Fix linting errors
 	isort .
 
 run-local:  ## Run django local server
-	python main.py runserver
+	python src/main.py runserver
 
 run-async:  ## Run server async with gunicorn
 	gunicorn main:asgi_application -b  0.0.0.0:8000 -k uvicorn.workers.UvicornWorker -w 4
