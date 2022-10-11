@@ -45,13 +45,13 @@ exclude = '''
 [tool.coverage.run]
 omit = [
     "conftest.py",
-    "**tests**",
     "**test**",
 ]
 branch = true
 
 [tool.pytest.ini_options]
 pythonpath = "src"
+addopts = "--cov --cov-report term-missing --cov-report xml"
 
 [build-system]
 requires = ["poetry-core"]
