@@ -12,13 +12,12 @@ test:  ## Run tests
 	pytest
 
 lint: ## Lint code
-	flake8 --show-source --statistics .
-	isort --check-only --diff .
+	ruff .
 	black --check --diff .
 
 lint-fix: ## Fix linting errors
 	black .
-	isort .
+	ruff --fix .
 
 run-local:  ## Run django local server
 	python src/main.py runserver
