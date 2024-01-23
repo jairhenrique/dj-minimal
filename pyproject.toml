@@ -12,7 +12,7 @@ gunicorn = "^21.2.0"
 uvicorn = "^0.26.0"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.7.1"
+mypy = "^1.8.0"
 pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
 black = "^23.12.0"
