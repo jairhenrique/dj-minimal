@@ -9,43 +9,18 @@ license = "MIT"
 python = "^3.10"
 Django = "^5"
 gunicorn = "^21.2.0"
-uvicorn = "^0.26.0"
+uvicorn = "^0.27.0"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.7.1"
 pytest = "^7.4.3"
 pytest-cov = "^4.1.0"
-black = "^23.12.0"
 pytest-asyncio = "^0.23.2"
 pytest-django = "^4.7.0"
 ruff = "^0"
 
-[tool.black]
-line-length = 88
-target-version = ['py310']
-include = '\.pyi?$'
-exclude = '''
-(
-  /(
-      \.eggs         # exclude a few common directories in the
-    | \.git          # root of the project
-    | \.hg
-    | \.mypy_cache
-    | \.tox
-    | \.venv
-    | _build
-    | buck-out
-    | build
-    | dist
-  )
-)
-'''
-
 [tool.coverage.run]
-omit = [
-    "conftest.py",
-    "tests/**",
-]
+omit = ["conftest.py", "tests/**"]
 branch = true
 
 [tool.pytest.ini_options]
@@ -53,8 +28,8 @@ pythonpath = "src"
 addopts = "--cov --cov-report term-missing --cov-report xml"
 
 [tool.ruff]
-select = [ "E", "W", "F", "C90", "UP", "N", "I", "SIM", "RUF" ]
-per-file-ignores = { }
+select = ["E", "W", "F", "C90", "UP", "N", "I", "SIM", "RUF"]
+per-file-ignores = {}
 line-length = 88
 target-version = "py310"
 
