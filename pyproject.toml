@@ -28,10 +28,12 @@ pythonpath = "src"
 addopts = "--cov --cov-report term-missing --cov-report xml"
 
 [tool.ruff]
-select = ["E", "W", "F", "C90", "UP", "N", "I", "SIM", "RUF"]
-per-file-ignores = {}
 line-length = 88
 target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "C90", "UP", "N", "I", "SIM", "RUF"]
+per-file-ignores = {}
 
 [build-system]
 requires = ["poetry-core"]
