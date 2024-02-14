@@ -9,7 +9,7 @@ license = "MIT"
 python = "^3.10"
 Django = "^5"
 gunicorn = "^21.2.0"
-uvicorn = "^0.27.0"
+uvicorn = "^0.27.1"
 
 [tool.poetry.group.dev.dependencies]
 mypy = "^1.7.1"
