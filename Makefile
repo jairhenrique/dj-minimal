@@ -12,11 +12,11 @@ test:  ## Run tests
 	pytest
 
 lint: ## Lint code
-	ruff .
+	ruff check .
 	ruff format --check
 
 lint-fix: ## Fix linting errors
-	ruff --fix .
+	ruff check --fix .
 	ruff format .
 
 run-local:  ## Run django local server
