@@ -12,7 +12,7 @@ gunicorn = "^21.2.0"
 uvicorn = "^0.27.1"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.7.1"
+mypy = "^1.9.0"
 pytest = "^8.0.2"
 pytest-cov = "^4.1.0"
 pytest-asyncio = "^0.23.5"
