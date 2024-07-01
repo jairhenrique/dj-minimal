@@ -12,10 +12,7 @@ from django.urls import path
 def strtobool(value: str) -> bool:
     true_values = ("y", "yes", "t", "true", "on", "1")
 
-    if isinstance(value, str) and value.lower() in true_values:
-        return True
-
-    return False
+    return bool(isinstance(value, str) and value.lower() in true_values)
 
 
 if not settings.configured:
