@@ -9,13 +9,13 @@ license = "MIT"
 python = "^3.10"
 Django = "^5"
 gunicorn = "^23.0.0"
-uvicorn = "^0.30.5"
+uvicorn = "^0.30.6"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.11.1"
+mypy = "^1.11.2"
 pytest = "^8.3.2"
 pytest-cov = "^5.0.0"
-pytest-asyncio = "^0.23.8"
+pytest-asyncio = "^0.24.0"
 pytest-django = "^4.7.0"
 ruff = "^0"
 
