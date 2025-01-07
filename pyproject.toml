@@ -1,5 +1,6 @@
 [tool.poetry]
 name = "dj-minimal"
+package-mode = false
 version = "0.1.0"
 description = "A minimal async django"
 authors = ["Jair Henrique <jair.henrique@gmail.com>"]
