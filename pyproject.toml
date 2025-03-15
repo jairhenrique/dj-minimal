@@ -1,30 +1,39 @@
-[tool.poetry]
+[project]
 name = "dj-minimal"
-package-mode = false
 version = "0.1.0"
 description = "A minimal async django"
-authors = ["Jair Henrique <jair.henrique@gmail.com>"]
+authors = [{ name = "Jair Henrique", email = "jair.henrique@gmail.com" }]
+requires-python = ">=3.10"
 license = "MIT"
+dependencies = [
+    "Django>=5,<6",
+    "granian>=2.0.1",
+    "uvicorn>=0.34.0,<0.35",
+]
 
-[tool.poetry.dependencies]
-python = "^3.10"
-Django = "^5"
-gunicorn = "^23.0.0"
-uvicorn = "^0.34.0"
+[dependency-groups]
+dev = [
+    "mypy>=1.14.0,<2",
+    "pytest>=8.3.4,<9",
+    "pytest-cov>=6.0.0,<7",
+    "pytest-asyncio>=0.25.0,<0.26",
+    "pytest-django>=4.9.0,<5",
+    "ruff>=0,<1",
+]
 
-[tool.poetry.group.dev.dependencies]
-mypy = "^1.14.0"
-pytest = "^8.3.4"
-pytest-cov = "^6.0.0"
-pytest-asyncio = "^0.25.0"
-pytest-django = "^4.9.0"
-ruff = "^0"
+[tool.uv]
+package = false
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.coverage.run]
 omit = ["conftest.py", "tests/**"]
 branch = true
 
 [tool.pytest.ini_options]
+asyncio_default_fixture_loop_scope = "function"
 pythonpath = "src"
 addopts = "--cov --cov-report term-missing --cov-report xml"
 
@@ -35,7 +44,3 @@ target-version = "py310"
 [tool.ruff.lint]
 select = ["E", "W", "F", "C90", "UP", "N", "I", "SIM", "RUF"]
 per-file-ignores = {}
-
-[build-system]
-requires = ["poetry-core"]
-build-backend = "poetry.core.masonry.api"
