@@ -8,6 +8,15 @@ help:  ## This help
 django-admin:  ## Like django-admin.py
 	uv run python main.py $(args)
 
+dependencies:  ## Install dependencies
+	uv sync --frozen
+
+update-dependencies:  ## Update dependencies
+	uv sync -U
+
+outdated:  ## Check outdated dependencies
+	uv pip list --outdated
+
 test:  ## Run tests
 	uv run pytest
 
