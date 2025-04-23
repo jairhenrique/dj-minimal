@@ -25,8 +25,8 @@ lint: ## Lint code
 	uv run ruff format --check .
 
 lint-fix: ## Fix linting errors
-	uv ruff check --fix --unsafe-fixes .
-	uv ruff format .
+	uv run ruff check --fix --unsafe-fixes .
+	uv run ruff format .
 
 run-local:  ## Run django local server
 	uv run python src/main.py runserver
