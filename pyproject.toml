@@ -5,7 +5,7 @@ description = "A minimal async django"
 authors = [{ name = "Jair Henrique", email = "jair.henrique@gmail.com" }]
 requires-python = ">=3.10"
 license = "MIT"
-dependencies = ["Django==5.2.1", "granian==2.2.6", "uvicorn==0.34.2"]
+dependencies = ["Django==5.2.1", "granian==2.3.0", "uvicorn==0.34.2"]
 
 [dependency-groups]
 dev = [
@@ -14,7 +14,7 @@ dev = [
     "pytest-cov==6.1.1",
     "pytest-asyncio==0.26.0",
     "pytest-django==4.11.1",
-    "ruff==0.11.9",
+    "ruff==0.11.10",
 ]
 
 [tool.uv]
