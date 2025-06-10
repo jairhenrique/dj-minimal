@@ -5,7 +5,7 @@ description = "A minimal async django"
 authors = [{ name = "Jair Henrique", email = "jair.henrique@gmail.com" }]
 requires-python = ">=3.10"
 license = "MIT"
-dependencies = ["Django==5.2.2", "granian==2.3.3", "uvicorn==0.34.3"]
+dependencies = ["Django==5.2.3", "granian==2.3.3", "uvicorn==0.34.3"]
 
 [dependency-groups]
 dev = [
