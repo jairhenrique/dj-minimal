@@ -4,6 +4,7 @@ import pytest
 
 
 @pytest.mark.asyncio
+@pytest.mark.benchmark
 async def test_should_pass(async_client):
     response = await async_client.get("/")
     assert response.status_code == HTTPStatus.OK
