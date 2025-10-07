@@ -7,7 +7,7 @@ requires-python = ">=3.10"
 license = "MIT"
 dependencies = [
     "Django==5.2.7",
-    "granian==2.5.4",
+    "granian==2.5.5",
     "pytest-codspeed>=4.0.0",
     "uvicorn==0.37.0",
 ]
@@ -19,7 +19,7 @@ dev = [
     "pytest-cov==7.0.0",
     "pytest-asyncio==1.2.0",
     "pytest-django==4.11.1",
-    "ruff==0.13.3",
+    "ruff==0.14.0",
 ]
 
 [tool.uv]
