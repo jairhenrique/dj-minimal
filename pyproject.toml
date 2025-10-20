@@ -9,7 +9,7 @@ dependencies = [
     "Django==5.2.7",
     "granian==2.5.5",
     "pytest-codspeed>=4.0.0",
-    "uvicorn==0.37.0",
+    "uvicorn==0.38.0",
 ]
 
 [dependency-groups]
