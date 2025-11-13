@@ -6,7 +6,7 @@ authors = [{ name = "Jair Henrique", email = "jair.henrique@gmail.com" }]
 requires-python = ">=3.10"
 license = "MIT"
 dependencies = [
-    "Django==5.2.7",
+    "Django==5.2.8",
     "granian==2.5.7",
     "pytest-codspeed>=4.0.0",
     "uvicorn==0.38.0",
