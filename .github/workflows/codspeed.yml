@@ -9,7 +9,7 @@ on:
 jobs:
   benchmarks:
     name: Run benchmarks
-    runs-on: ubuntu-slim
+    runs-on: ubuntu
     steps:
       - uses: actions/checkout@v6
 
