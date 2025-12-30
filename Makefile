@@ -23,6 +23,7 @@ test:  ## Run tests
 lint: ## Lint code
 	uv run ruff check .
 	uv run ruff format --check .
+	uv run ty check src/
 
 lint-fix: ## Fix linting errors
 	uv run ruff check --fix --unsafe-fixes .
