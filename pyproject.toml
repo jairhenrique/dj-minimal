@@ -14,8 +14,8 @@ dev = [
     "pytest-cov==7.0.0",
     "pytest-django==4.12.0",
     "pytest==9.0.2",
-    "ruff==0.15.4",
-    "ty==0.0.20",
+    "ruff==0.15.5",
+    "ty==0.0.21",
 ]
 
 [tool.uv]
